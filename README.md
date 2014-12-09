@@ -4,11 +4,11 @@
 Dat Project
 
 % Loads selected map
-cityMap = imread('Boston_ScreenShot.jpg');
+cityMap = imread('Boston_Proj.jpg');
 % colors every 25th row of pixels white
-cityMap(25:25:end,:,:) = 255;
+cityMap(15:15:end,:,:) = 0;
 % colors every 25th column of pixels white
-cityMap(:,25:25:end,:) = 255;
+cityMap(:,15:15:end,:) = 0;
 % displays map
 imshow(cityMap);
 
@@ -69,10 +69,10 @@ end
 
 
 [x,y] = getpts(figure(1));
-startX = x-mod(x,25)+1;
-endX = x - mod(x,25) + 24;
-startY = y-mod(y,25)+1;
-endY = y - mod(y,25) + 24;
+startX = x-mod(x,15)+1;
+endX = x - mod(x,15) + 14;
+startY = y-mod(y,15)+1;
+endY = y - mod(y,15) + 14;
 [x,y] = meshgrid(startX:endX,startY:endY);
 figure(1);
 plot(x,y,boxColor);
@@ -90,6 +90,11 @@ if continueMenu == 2
 end
 
 end
+
+
+        
+        
+
 
 
         
